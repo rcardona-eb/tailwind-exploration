@@ -1,7 +1,7 @@
 // Taken from https://css-tricks.com/snippets/javascript/lighten-darken-color/
 
 function darken(color, amt) {
-  var usePound = false;
+  var usePound = true;
 
   if (color[0] == "#") {
     col = color.slice(1);

@@ -3,6 +3,7 @@ const darken = require("../../../utils/colors").darken;
 const properties = {
   borderWidth: "1px",
   borderColor: "transparent",
+  backgroundColor: "transparent",
   borderRadius: {
     xs: "0.5rem",
     base: "0.5rem",
@@ -37,7 +38,7 @@ const properties = {
     xl: "0.75em",
   },
   textDecoration: "none",
-  whiteSpace: "",
+  // whiteSpace: "",
   hoverBackground: "inherit",
   hoverColor: "#1a1a1a",
   hoverTextDecoration: "none",
@@ -55,10 +56,9 @@ const createDefault = () => {
       border: `${properties.borderWidth} solid ${properties.borderColor}`,
       borderRadius: `${properties.borderRadius.base}`,
       color: properties.color,
-      // cursor: pointer,
       display: "inline-flex",
       fontFamily: "inherit",
-      fontSize: properties.fontSize,
+      fontSize: properties.fontSize.base,
       fontWeight: properties.fontWeight,
       lineHeight: properties.lineHeight,
       justifyContent: "center",
@@ -66,7 +66,6 @@ const createDefault = () => {
       textDecoration: properties.textDecoration,
       userSelect: "none",
       verticalAlign: "middle",
-      whiteSpace: properties.whiteSpace,
       "&:hover": {
         backgroundColor: properties.hoverBackground,
         color: properties.color,
@@ -84,7 +83,7 @@ const createDefault = () => {
         color: properties.activeColor,
       },
       "&:disabled": {
-        pointerEvent: "none",
+        // pointerEvent: "none",
         opacity: properties.disabledOpacity,
       },
     },
@@ -102,20 +101,30 @@ const createSizes = (sizes) => {
       },
     });
   });
-  // console.log(buttons);
   return buttons;
 };
 
 const createVariants = (colors) => {
-  // console.log(colors);
-  colors.forEach((color) => {
-    properties.activeColor = "#fff";
-    properties.activeBackground = darken(color, 25);
-    properties.activeBorderColor = darken(color, 25);
-    properties.borderColor = color;
-    properties.hoverBackground = darken(color, 10);
-    properties.hoverColor = "#fff";
+  let buttons = {};
+  Object.entries(colors).forEach(([color, value]) => {
+    Object.assign(buttons, {
+      [`.btn-${color}`]: {
+        background: `${value}`,
+        color: "#fff",
+        "&:active": {
+          color: "#fff",
+          background: darken(color, 50),
+          borderColor: darken(color, 25),
+        },
+        "&:hover": {
+          color: "#fff",
+          background: darken(color, 99),
+          borderColor: darken(color, 50),
+        },
+      },
+    });
   });
+  return buttons;
 };
 
 module.exports = {
