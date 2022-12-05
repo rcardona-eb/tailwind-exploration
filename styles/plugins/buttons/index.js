@@ -11,7 +11,7 @@ module.exports = plugin.withOptions(function (options = {}) {
       ...styles.createSizes(sizes),
       ...styles.createVariants(colors),
     };
-
+    console.log(buttons);
     addComponents([buttons]);
   };
 });
