@@ -83,7 +83,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl font-bold capitalize my-10 text-center text-green">
-            Importing React component
+            React component
           </h1>
           <div className="flex flex-row justify-center items-center">
             <Button
@@ -98,6 +98,14 @@ export default function Home() {
               className="btn-orange btn-xl capitalize mx-10 rounded-b-full"
               label="React Button XL"
             />
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-3xl font-bold capitalize my-10 text-center text-green">
+            Css component
+          </h1>
+          <div className="flex flex-row justify-center items-center">
+            <button className="css-button">css button</button>
           </div>
         </div>
       </main>
