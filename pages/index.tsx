@@ -27,6 +27,7 @@ export default function Home() {
       </Head>
 
       <main className="m-h-screen p-16 flex-1 flex-col justify-center items-center">
+        {/* Regular button html element */}
         <div className="text-center text-red text-3xl font-bold capitalize">
           Buttons in different sizes
         </div>
@@ -45,6 +46,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex justify-center items-center flex-col my-9">
+          {/* Regular button html element with different colors */}
           <div className="text-center text-orange text-3xl font-bold capitalize my-10">
             Buttons in different colors and sizes
           </div>
@@ -82,6 +84,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
+          {/* React components */}
           <h1 className="text-3xl font-bold capitalize my-10 text-center text-green">
             React component
           </h1>
@@ -101,6 +104,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
+          {/* CSS Tailwind components */}
           <h1 className="text-3xl font-bold capitalize my-10 text-center text-green">
             Css component
           </h1>
@@ -110,6 +114,7 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Footer */}
       <footer className="flex flex-1 justify-center items-center p-8 border-t-black">
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
