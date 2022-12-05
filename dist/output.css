@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -547,16 +547,80 @@ video {
   }
 }
 
+.btn {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  color: #1a1a1a;
+  display: inline-flex;
+  font-family: inherit;
+}
+
+.btn fontSize {
+  xs: 0.75rem;
+  base: 1rem;
+  sm: 0.875rem;
+  lg: 1.125rem;
+  xl: 1.25rem;
+}
+
+.btn {
+  font-weight: 600;
+  line-height: 1.4;
+  justify-content: center;
+  padding: 0.75em 1.25em;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: ;
+}
+
+.btn:hover {
+  background-color: inherit;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.btn:focus {
+  border-color: transparent;
+  color: #1a1a1a;
+  outline: 0;
+}
+
+.btn:active {
+  background-color: inherit;
+  border-color: inherit;
+  color: inherit;
+}
+
+.btn:disabled {
+  pointer-event: none;
+  opacity: 0.65;
+}
+
+.my-9 {
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .flex {
   display: flex;
 }
 
-.grid {
-  display: grid;
+.flex-1 {
+  flex: 1 1 0%;
 }
 
-.flex-col {
-  flex-direction: column;
+.flex-grow {
+  flex-grow: 1;
 }
 
 .items-center {
@@ -567,30 +631,29 @@ video {
   justify-content: center;
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.border-t-black {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.p-16 {
+  padding: 4rem;
 }
 
-* {
-  box-sizing: border-box;
+.p-8 {
+  padding: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.text-center {
+  text-align: center;
+}
 
-  body {
-    color: white;
-    background: black;
-  }
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-green {
+  --tw-text-opacity: 1;
+  color: rgb(0 121 74 / var(--tw-text-opacity));
 }
