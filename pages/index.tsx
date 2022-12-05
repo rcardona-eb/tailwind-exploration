@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Image from "next/image";
-import classNames from "classnames";
-import "../styles/Home.module.css";
 
 export default function Home() {
   // TODO: for some reason iterating over these objects don't apply the expected classes
@@ -32,10 +30,18 @@ export default function Home() {
           Buttons in different sizes
         </div>
         <div className="flex justify-center items-center my-9">
-          <button className="btn btn-xs bg-navy text-white mx-10">xs</button>
-          <button className="btn btn-sm bg-navy text-white mx-10">sm</button>
-          <button className="btn btn-lg bg-navy text-white mx-10">lg</button>
-          <button className="btn btn-xl bg-navy text-white mx-10">xl</button>
+          <button className="btn btn-xs bg-navy hover:bg-navy-dark hover:text-white text-white mx-10">
+            xs
+          </button>
+          <button className="btn btn-sm bg-navy hover:bg-navy-dark hover:text-white text-white mx-10">
+            sm
+          </button>
+          <button className="btn btn-lg bg-navy hover:bg-navy-dark hover:text-white text-white mx-10">
+            lg
+          </button>
+          <button className="btn btn-xl bg-navy hover:bg-navy-dark hover:text-white text-white mx-10">
+            xl
+          </button>
         </div>
         <div className="flex justify-center items-center flex-col my-9">
           <div className="text-center text-orange text-3xl font-bold capitalize my-10">

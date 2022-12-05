@@ -3,7 +3,7 @@ const darken = require("../../../utils/colors").darken;
 const properties = {
   borderWidth: "1px",
   borderColor: "transparent",
-  backgroundColor: "transparent",
+  backgroundColor: "inherit",
   borderRadius: {
     xs: "0.5rem",
     base: "0.5rem",

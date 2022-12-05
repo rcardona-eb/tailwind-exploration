@@ -25,5 +25,7 @@ module.exports = {
   },
   plugins: [
     require("./styles/plugins/buttons")({ sizes: ["xs", "sm", "lg", "xl"] }),
+    "./plugins/titles",
+    "./plugins/cards",
   ],
 };
