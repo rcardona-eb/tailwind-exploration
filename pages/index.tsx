@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from "next/image";
+import Button from "../src/components/Button/Button";
 
 export default function Home() {
   // TODO: for some reason iterating over these objects don't apply the expected classes
@@ -78,6 +79,25 @@ export default function Home() {
             <button className="btn btn-lg btn-purple mx-10 my-3">
               btn-purple
             </button>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center">
+          <h1 className="text-3xl font-bold capitalize my-10 text-center text-green">
+            Importing React component
+          </h1>
+          <div className="flex flex-row justify-center items-center">
+            <Button
+              className="btn-red capitalize mx-10 rounded-full"
+              label="React Button base size"
+            />
+            <Button
+              className="btn-green btn-xs capitalize mx-10"
+              label="React Button XS"
+            />
+            <Button
+              className="btn-orange btn-xl capitalize mx-10 rounded-b-full"
+              label="React Button XL"
+            />
           </div>
         </div>
       </main>
